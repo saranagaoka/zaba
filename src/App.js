@@ -5,7 +5,7 @@ function App() {
   const [sometext, setSometext] = useState(false);
   const napis_3 =
     "Hi Konstantin! Wszystkiego najlepszego z okazji dnia mężczyzn!";
-
+  const [counter, setCounter] = useState(0);
   const foo = useCallback(() => {
     if (counter >= napis_3.length) {
       return;
@@ -13,13 +13,11 @@ function App() {
       setCounter((prev) => prev + 1);
       setTimeout(foo, 100);
     }
-  }, [setTimeout, setCounter]);
+  }, [setTimeout, setCounter, counter]);
 
   const magicfoo = () => {
     setSometext((prev) => !prev);
   };
-
-  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     if (!sometext) {
