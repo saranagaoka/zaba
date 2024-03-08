@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function App() {
   const [sometext, setSometext] = useState(false);
@@ -25,7 +25,7 @@ function App() {
     } else {
       setCounter(0);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-dep
+    // eslint-disable-next-line
   }, [sometext]);
 
   return (
