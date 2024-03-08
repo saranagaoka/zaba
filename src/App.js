@@ -6,14 +6,14 @@ function App() {
   const napis_3 =
     "Hi Konstantin! Wszystkiego najlepszego z okazji dnia mężczyzn!";
   const [counter, setCounter] = useState(0);
-  const foo = useCallback(() => {
+  const foo = () => {
     if (counter >= napis_3.length) {
       return;
     } else {
       setCounter((prev) => prev + 1);
       setTimeout(foo, 100);
     }
-  }, [setCounter, counter]);
+  };
 
   const magicfoo = () => {
     setSometext((prev) => !prev);
@@ -25,7 +25,8 @@ function App() {
     } else {
       setCounter(0);
     }
-  }, [sometext, foo]);
+    // eslint-disable-next-line react-hooks/exhaustive-dep
+  }, [sometext]);
 
   return (
     <div>
