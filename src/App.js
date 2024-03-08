@@ -1,19 +1,19 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 function App() {
   const [sometext, setSometext] = useState(false);
   const napis_3 =
     "Hi Konstantin! Wszystkiego najlepszego z okazji dnia mężczyzn!";
 
-  const foo = () => {
+  const foo = useCallback(() => {
     if (counter >= napis_3.length) {
       return;
     } else {
       setCounter((prev) => prev + 1);
       setTimeout(foo, 100);
     }
-  };
+  }, [setTimeout, setCounter]);
 
   const magicfoo = () => {
     setSometext((prev) => !prev);
