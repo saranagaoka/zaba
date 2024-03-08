@@ -13,7 +13,7 @@ function App() {
       setCounter((prev) => prev + 1);
       setTimeout(foo, 100);
     }
-  });
+  }, [setCounter, counter]);
 
   const magicfoo = () => {
     setSometext((prev) => !prev);
@@ -25,7 +25,7 @@ function App() {
     } else {
       setCounter(0);
     }
-  }, [sometext, foo]);
+  }, [sometext]);
 
   return (
     <div>
