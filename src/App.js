@@ -25,7 +25,7 @@ function App() {
     } else {
       setCounter(0);
     }
-  }, [sometext]);
+  }, [sometext, foo]);
 
   return (
     <div>
