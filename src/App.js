@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 function App() {
   const [sometext, setSometext] = useState(false);
   const napis_3 =
-    "Hi Konstantin! Wszystkiego najlepszego z okazji dnia mężczyzn!";
+    "Hi Konstantin! Wszystkiego najlepszego z okazji dnia mężczyzn! Żebyś każdego dnia znalazł powód do uśmiechu, dni pełnych miłości i spełnienia najskrytszych marzeń! ";
   const [counter, setCounter] = useState(0);
   const foo = () => {
     if (counter >= napis_3.length) {
