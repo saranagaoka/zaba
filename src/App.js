@@ -11,7 +11,7 @@ function App() {
       return;
     } else {
       setCounter((prev) => prev + 1);
-      setTimeout(foo, 100);
+      setTimeout(foo, 80);
     }
   };
 
